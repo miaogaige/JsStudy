@@ -1,0 +1,12 @@
+body,div,ul,li,h2{margin: 0;padding: 0;}
+a{color: #000;text-decoration: none;}
+.mainbox{position:relative;width: 1000px;height:450px;overflow: hidden;margin: 0 auto;}
+.mainbox li{float:left;margin-left:-60px;width:250px;height:400px;overflow:hidden;list-style: none;border: 30px solid #fff;}
+.mainbox li img{width: 340px;}
+.mainbox h2{position: absolute;bottom:60px;right:150px;padding:5px 10px;background: rgba(255,255,255,0.4);letter-spacing: 0.5em;}
+.mainbox a{position: absolute;opacity: 0.6;}
+.mainbox a:hover{opacity: 1;}
+.mainbox .butleft,.mainbox .butright{top: 200px;font-size: 60px;color: #fff;}
+.mainbox .butleft{left: 50px;}
+.mainbox .butright{right: 50px;}
+.mainbox .play{top:0px;left: 0px;border: 1px solid #eee;padding: 3px;}

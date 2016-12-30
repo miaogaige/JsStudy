@@ -1,0 +1,8 @@
+.wrap{position: relative;margin: 30px auto;width: 732px;height: 460px;overflow: hidden;}
+.pic img{width: 732px;height: 460px;}
+.list{position: absolute;z-index: 999; bottom: 40px; right: 80px;}
+.list li{width: 20px;height: 20px;background: #fff;border: 1px solid #FF5500;color: #666;cursor: pointer;text-align: center;line-height: 20px;float: left;margin-right: 10px;}
+.list li:hover,.list li.on{background: #f50;color: #fff;}
+.btn span{z-index: 999;display: inline-block;position: absolute;top:160px;width: 32px;height: 60px;background: rgba(0,0,0,0.3);color: #fff;font-size: 30px; text-align: center;line-height: 60px;cursor: pointer;}
+.btn .left{left: 0;}
+.btn .right{right: 0;}

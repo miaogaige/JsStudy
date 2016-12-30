@@ -1,0 +1,6 @@
+.tab-box{margin: 100px auto; width: 500px;font-size: 14px;border: 1px solid #eee;}
+.tab-title ul{background: #efefef;line-height: 28px; clear: both;list-style: none;padding: 0; margin: 0;}
+.tab-title li{list-style: none;width: 100px;float: left;padding: 0; margin: 0; text-align: center;}
+.tab-title li.actice{background: #fff;}
+.tab-con{padding: 10px 20px;}
+.tab-con>div{display: none;}

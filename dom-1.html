@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>dom-1</title>
+		<script type="text/javascript">
+			window.onload=function(){
+				//第一种方法
+//				 for(i=0;i<=10;i++){
+//					var p=[];
+//					var text=[];
+//					text[i]=document.createTextNode(i);
+//					p[i]=document.createElement("p");
+//					p[i].appendChild(text[i]);
+//					document.body.appendChild(p[i]);
+//				  }
+
+//第二种方法
+			var zero=function(num){
+				if(num<10){
+					num="0"+num;
+				}
+				return num;
+			}
+
+             var div =document.createElement("div");
+//           var div=document.createDocumentFragment("div")//文档碎片
+             for(i=1;i<=10;i++){
+             	var p=document.createElement("p");
+             	p.appendChild(document.createTextNode(zero(i)));
+             	div.appendChild(p);
+             }
+             document.body.appendChild(div);
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

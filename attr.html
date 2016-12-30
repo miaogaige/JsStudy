@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>attribute</title>
+		<style type="text/css">
+			.text{color: #f00;}
+			
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var div=document.createElement("div");
+				//使用attribute
+				div.appendChild(document.createTextNode("测试"));
+				div.setAttribute("id","div1");
+				div.setAttribute("style","font-size: 20px;");
+				console.log(div.getAttribute("id"));
+				div.removeAttribute("id");
+				
+				//不使用attribute
+				div.style.className="text";
+				div.style.width="100px";
+				div.style.height="100px";
+				div.style.cssText="margin:100px;text-align: center;line-height: 100px;background: #efefef;"
+				
+				document.body.appendChild(div);
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

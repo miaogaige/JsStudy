@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>event对象</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<script type="text/javascript">
+			window.onload=function()
+			{ 
+				document.getElementById("box").style.cssText="background:#eee;width:100px;height: 100px;margin: 100px auto;"
+				document.getElementById("box").onmousedown=function(e)//e可以自定义，代表event 对象
+				{
+//					
+					if(e.button == 0){
+						alert("左") ;
+					}
+						else if(e.button == 1){
+							alert(" 滚轴")
+						}
+					  else if(e.button == 2){
+							alert(" 右")
+						}
+					  else {
+							alert(" 其他")
+						}
+					  if(window.event){
+					  	e=event;//兼容
+					  }
+					  //e=window.event||e;简写
+					  var show=document.getElementById("show");
+					  var off=e.clientX - this.offsetLeft;
+					  var a="e.type:"+ e.type +"<br>" +
+					  "\ne.target:" + e.target + "<br>" +
+					  "e.screenX:" + e.screenX + "<br>" +
+					  "e.screenY:" +e.screenY + "<br>" +
+					  "e.clientX:" +e.clientX + "<br>" +
+					  "e.clientY:" +e.clientY + "<br>" +
+					  "e.offsetX:" +e.offsetX +"<br>" +
+					  "e.offsetX-1:" + (e.clientX - this.offsetLeft);
+					    show.innerHTML=a;
+					 
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			6666
+		</div>
+		<div id="show" style="margin: 0 auto; width: 200px;">
+			
+		</div>
+	</body>
+</html>

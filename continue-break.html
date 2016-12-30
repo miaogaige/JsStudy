@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>continue-break</title>
+		<script type="text/javascript">
+		//continue,break都针对for循环
+		//continue 结束本次循环，i++继续，跳到下一个循环
+		//break结束全部循环，i++ 不执行
+		window.onload=function(){
+			for (i=2;i<=5;i++){
+				if(i<4){
+					i+=2;
+					continue
+				}
+				else{
+					break
+				}
+				i+=3;
+			}
+			console.log(i)
+		}
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

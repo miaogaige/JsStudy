@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>window</title>
+		<script type="text/javascript">
+			//setTimeout对象
+//			
+//			setTimeout('alert("123")',2000);//直接调用
+//			
+//			//调用函数
+//			setTimeout(function(){
+//				alert("我试试");
+//			},1000)
+//			
+//			 //调用方法
+//			 var a=function(a,b){
+//			 	alert(a+b);
+//			 }
+//			 setTimeout('a(4,5)',3000);
+			 
+			 //setInterval对象
+			 var i=1;
+			 var s=setInterval(
+			 	function(){
+			 		alert(i++);
+			 		if(i>5){
+			 			clearInterval(s);
+			 		}
+			 	}
+			 	,1000);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

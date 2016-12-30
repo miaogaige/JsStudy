@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+	          document.onclick=function(e){
+	          	ele=e.srcElement;
+	          	if(ele.className=="p"){
+	          		var index=ele.getAttribute("index");
+	          		alert(index);
+	          	}
+	          }
+				
+			}
+		</script>
+	</head>
+	<body>
+		<span class="p">22222222222</span>
+		<span  class="p">22222222222</span>
+		 <span  class="p">22222222222</span>
+	</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>冒泡</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<style type="text/css">
+			#box-1{
+				margin: 100px auto;
+				padding: 50px;
+				width: 200px;
+				height: 200px;
+				background: #efefef;
+				box-sizing: border-box;
+			}
+			#box-2{
+				
+				width: 100px;
+				height: 100px;
+				background: #ddd;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function()
+			{
+				var box1=document.getElementById("box-1");
+				var box2=document.getElementById("box-2");
+				document.body.onclick=function()
+				{
+					alert("我是body");
+				}
+				box1.onclick=function()
+				{
+					alert("我是box1");
+				}
+				box2.onclick=function(e)
+				{
+					e=window.event||e;
+					alert("我是box2,我阻止了冒泡事件");
+//					e.stopPropagation();  标准
+					//e.cancelBubble=true;   IE6,7,8 chrome，火狐 两种都支持
+					 if(e.stopPropagation){
+					 	e.stopPropagation()
+					 }
+					 else{
+					 	e.cancelBubble=true;
+					 }
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box-1">
+			<div id="box-2">
+				
+			</div>
+		</div>
+	</body>
+</html>

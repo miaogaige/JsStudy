@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>function</title>
+		<script type="text/javascript">
+		//属性arguments
+			var abc=function(){
+				alert(arguments[0]+arguments[1]+arguments[2]);
+			}
+			abc(1,2,3);
+			
+			//属性arguments.length
+			var d=function(){
+				alert(arguments.length)
+			}
+			d(2,3,9,7);
+			
+			//最后一个作为方法体
+			var f=new Function("a","b","c","alert(a+b+c)");
+			f(20,30,40);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>date</title>
+		<script type="text/javascript">
+			var d=new Date();
+			console.log(d.getDate());
+			console.log(d.getDay());
+			console.log(d.getMonth());
+			console.log(d.getFullYear());
+			console.log(d.getHours());
+			console.log(d.getMinutes());
+			console.log(d.getSeconds());
+			console.log(d.getMilliseconds());
+			var zero=function (num){
+				return num<10 ? ("0"+num) : num;
+			}
+			console.log(zero(d.getDate())); 
+			console.log(d.getTime());//从1970年1月1日到现在经过的毫秒数
+			
+			window.setInterval(){
+				window.onload=function(
+					function(){
+						var date1=new Date();
+						var date2=new Date('2018/08/12');
+						var date3=date2.getTime()-date1.getTime();//
+						
+					}
+				)
+			
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

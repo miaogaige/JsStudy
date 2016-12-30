@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>对象</title>
+		<script type="text/javascript">
+			var style={x:1.5,y:2.5,z:3.5}
+//			alert(style.x);
+            var bmw={name:"bmw",width:style.x,legth:style.y,height:style.z}
+//          alert(bmw.height);
+            var people ={
+            	name:"miao",
+            	sex:"woman",
+            	age:22,
+            	car:bmw,
+            	address1:"上海",
+            	address2:"北京",
+            	address3:"山西"
+            }
+            for(i=0;i<10;i++){
+            	 console.log(people["address"+(i+1)]);//[]读取对象名 对象名["属性名值是变量"]
+            }
+            
+            //构造函数
+            var car=function(name,color,lunzi){
+            	// 实例化公有属性/公有方法
+            	   var lunzi=4;//私有的属性
+            	   
+	            	this.name=name;
+	            	this.color=color;
+	            	this.lunzi=lunzi;
+	            	
+	            	
+	            	//私有的方法
+	            	this.si=function(){
+	            		alert("我是私有的")
+	            	}
+	            	
+	            	this.say=function(){
+	            		alert("我是"+this.name+this.color+this.lunzi)
+	            	}
+            }
+//           	car.prototype.price=34w;
+            var ben=new car("奔驰","黑色" ,4);
+            ben.say();
+            
+            
+            //删除属性
+            var person={name:"小米",sex:"女",1:1}
+            delete person.name;//真删除
+            console.log(person.name);
+            person.sex=null;//假删除
+            console.log(person.sex);
+            //属性名为数字时
+            console.log(person[1]);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

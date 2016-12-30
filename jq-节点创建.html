@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jq-节点创建</title>
+		<style type="text/css">
+			.squre-red{background: #f00;width: 100px; height: 100px;color: #fff;}
+		</style>
+		<script src="js/jquery-3.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	
+	<body>
+		<div class="div1">111</div>
+		<div class="div2"> 
+			<button class="addto">appendTo点击添加节点</button>
+			<button class="add">append点击添加节点</button>
+			<button class="before">在前面添加节点</button>
+			<button class="after">在后面添加节点</button>
+		</div>
+        	<div class="div3">333</div>
+         <script type="text/javascript">
+           $(".addto").click(function(){
+         		var $div2=$(".div2");
+                var n=$("<div class='squre-red'>999</div>");
+         		n.appendTo($div2);
+});
+            $(".add").click(function(){
+              	var $div2=$(".div2");
+                var n=$("<div class='squre-red'>999</div>");
+         		$div2.append(n);
+});
+            $(".before").click(function(){
+              	var $div2=$(".div2");
+                var n=$("<div class='squre-red'>999</div>");
+         		$div2.before(n);
+});
+            $(".after").click(function(){
+              	var $div2=$(".div2");
+                var n=$("<div class='squre-red'>999</div>");
+         		$div2.after(n);
+});
+         </script>
+	</body>
+</html>

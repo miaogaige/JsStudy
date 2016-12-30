@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>dom</title>
+		<script type="text/javascript">
+		window.onload=function(){
+			var d=document.createElement("div");    //createElement
+			var t=document.createTextNode("测试");   //createTextNode
+			var content=document.getElementById("content");
+			var p=document.getElementById("p")
+			var r=document.getElementById("r");
+			d.appendChild(t);                        //appendChild
+//          document.body.appendChild(d);
+//          content.insertBefore(d,p); //insertBefore
+//          setTimeout(function(){ content.removeChild(p);},3000);//指定删除
+
+            setTimeout(function(){ p.parentNode.removeChild(p);},3000);//parentNode
+           setTimeout(function(){content.replaceChild(d,r)},4000)     //replaceChild(newnode,oldnode)
+		}
+
+		</script>
+	</head>
+	<body>
+		<div id="content">
+			<div id="p">
+				999
+			</div>
+			<div id="r">
+				rrr
+			</div>
+		</div>
+	</body>
+</html>

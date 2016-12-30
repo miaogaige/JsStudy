@@ -1,0 +1,7 @@
+body{margin: 0 auto;font-size: 14px;color: #333;}
+a{color: #333;font-size: 14px;text-decoration: none;}
+a:hover{text-decoration: underline;color:#f00;}
+ ul,li,p{padding: 0px;margin: 0;}
+ ul,li{list-style: none;}
+.bg-eee{background: #eee;}
+.clearfix:after{clear:both;content:".";display:block;height:0;}

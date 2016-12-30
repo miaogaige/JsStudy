@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<style type="text/css">
+			#box-1{
+				margin: 100px auto;
+				padding: 50px;
+				width: 200px;
+				height: 200px;
+				background: #efefef;
+				box-sizing: border-box;
+			}
+			#box-2{
+				
+				width: 100px;
+				height: 100px;
+				background: #ddd;
+			}
+			#box-3{
+				width: 50px;
+				height: 50px;
+				background: #fff;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+			var box1=document.getElementById("box-1");
+			var box2=document.getElementById("box-2");
+			var box3=document.getElementById("box-3");
+			document.addEventListener("click",function(){alert("点击了document")},false);
+			box1.addEventListener("click",function(){alert("box1")},false);
+			box2.addEventListener("click",function(){alert("box2")},false);
+			box2.removeEventListener("click",function(){alert("box2")},false);//事件，函数，false必须相同
+			
+			//IE6,IE7  attachEvent  detachEvent() 
+			/*if (box1.addEventListener()){
+				box1.addEventListener("click",function(){alert("box1-标准事件")},false);
+			}
+			else{
+				box1.attachEvent("onclick",function(){alert("box1-IE")},false);
+			}
+			*/
+			var bind=function(ele,eventname,fn)
+			{
+				 if (ele.addEventListener){
+					 ele.addEventListener(eventname,fn,false);
+				}
+				else{
+					ele.attachEvent("on"+ eventname,fn,false);
+				}
+			}
+			var fnbox=function(){
+				alert("执行");
+			}
+			bind(box3,"click",fnbox);
+		}
+
+		</script>
+	</head>
+	<body>
+		<div id="box-1">
+			<div id="box-2">
+				<div id="box-3">
+				
+			    </div>
+			</div>
+		</div>
+	</body>
+</html>
